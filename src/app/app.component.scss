@@ -1,0 +1,167 @@
+.title {
+  color: deeppink;
+  background: white;
+  font-size: large;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  margin: 40px auto 5px auto;
+  border: solid darkblue 5px;
+  border-radius: 5px;
+  justify-content: center;
+
+}
+
+.control-panel {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  margin: auto;
+  background: deeppink;
+  border: solid darkblue 5px;
+  border-radius: 5px;
+  justify-content: center;
+
+}
+
+.control-panel-col{
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.panel-line {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+
+.panel-btn {
+  width: 80px;
+  height: 30px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: darkblue solid 4px;
+  background: white;
+}
+
+
+
+
+.input-box{
+  width: 80px;
+  margin: 10px;
+  height: 30px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+  border: darkblue solid 4px;
+  border-radius: 4px;
+  background: white;
+}
+
+.input-box-in{
+  width: 60%;
+  border: none;
+  border-right: darkblue solid 4px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.input-box-desc{
+  justify-content: center;
+  display: flex;
+  width: 40%;
+}
+
+.addes-select{
+  width: 80px;
+  height: 30px;
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: darkblue solid 4px;
+  background: white;
+}
+
+.addes-select-option{
+  width: 80px;
+  height: 30px;
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: darkblue solid 4px;
+  background: white;
+}
+
+
+.commands {
+  display: flex;
+  flex-direction: row;
+  background: deeppink;
+  border: solid darkblue 5px;
+  border-radius: 5px;
+  min-height: 100px;
+  width: 50%;
+  margin: auto;
+}
+
+.commands-list{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: solid darkblue 5px;
+  min-height: 100px;
+  flex-grow: 1;
+}
+.macro-list{
+  display: flex;
+  flex-direction: column;
+  min-height: 100px;
+  flex-grow: 1;
+}
+
+.list-title{
+  text-align: center;
+  color: deeppink;
+  border-bottom: solid darkblue 5px;
+  background: white;
+  width: 100%;
+}
+
+.command{
+  background: white;
+  text-align: center;
+  border-width: 0 4px 4px 4px;
+  border: darkblue solid;
+  border-radius: 4px;
+  width: 50%;
+}
+
+
+.send-execute-bar{
+  align-self: flex-end;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border: solid darkblue ;
+  border-width: 5px 0 0 0;
+  background: white;
+  width: 100%;
+}
+
+

@@ -1,0 +1,6 @@
+{
+  "/visca": {
+    "target": "http://192.168.43.253:8080",
+    "secure": false
+  }
+}
