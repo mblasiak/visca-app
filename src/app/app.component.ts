@@ -19,5 +19,20 @@ export class AppComponent {
     this.macroService.addComand(new Command(CommandTitles.up, this.speed));
   }
 
+  addDownCommand() {
+    this.macroService.addComand(new Command(CommandTitles.down, this.speed));
+  }
+  addLeftCommand() {
+    this.macroService.addComand(new Command(CommandTitles.left, this.speed));
+  }
+  addRightCommand() {
+    this.macroService.addComand(new Command(CommandTitles.right, this.speed));
+  }
+  addResetCommand() {
+    this.macroService.addComand(new Command(CommandTitles.reset, this.speed));
+  }
+  addWaitCommand() {
+    this.macroService.addComand(new Command(CommandTitles.wait, this.time));
+  }
 
 }

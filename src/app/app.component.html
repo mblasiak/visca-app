@@ -11,7 +11,7 @@
     </div>
     <div class="panel-line">
       <div class="input-box">ADDRES</div>
-      <select class="addes-select" [(ngModel)]="address">
+      <select class="addes-select" [(ngModel)]="macroService.address">
         <option class="addes-select-option" selected value="1">1</option>
         <option selected value="2">2</option>
         <option selected value="3">3</option>
@@ -33,17 +33,17 @@
     </div>
 
     <div class="panel-line">
-      <button class="btn panel-btn">LEFT</button>
-      <button class="btn panel-btn">RESET</button>
-      <button class="btn panel-btn">RIGT</button>
+      <button class="btn panel-btn" (click)="addLeftCommand()">LEFT</button>
+      <button class="btn panel-btn" (click)="addResetCommand()">RESET</button>
+      <button class="btn panel-btn" (click)="addRightCommand()">RIGT</button>
     </div>
     <div class="panel-line">
-      <button class="btn panel-btn">DOWN</button>
+      <button class="btn panel-btn" (click)="addDownCommand()">DOWN</button>
     </div>
 
     <div class="panel-line">
 
-      <button class="btn panel-btn">WAIT</button>
+      <button class="btn panel-btn" (click)="addWaitCommand()">WAIT</button>
       <div class="input-box">
         <input type="number" class="input-box-in" max="10" min="1" [(ngModel)]="time">
         <div class="input-box-desc">s</div>
@@ -59,16 +59,33 @@
 
   <div class="commands-list">
     <div class="list-title">Current Config</div>
-    <div *ngFor="let commad of macroService.currentMacroConfig" class="command">{{commad.command}} | {{commad.speed}}%  </div>
+    <div class="new-macro-name">
+      <div>Macro Name</div>
+      <input class="macro-name-input" [(ngModel)]="macroService.macroName">
+    </div>
+    <div *ngFor="let commad of macroService.currentMacroConfig" class="command">
+      <div class="execute-text">{{commad.command}} | {{commad.speed}}</div>
+      <button class="execute-btn" (click)="macroService.removeCommand(commad)">Remove</button>
+    </div>
     <div class="send-execute-bar">
       <button class="btn panel-btn" (click)="macroService.executeMacro()">Execute</button>
-      <button class="btn panel-btn">Save</button>
+      <button class="btn panel-btn" (click)="macroService.saveMacro()">Save</button>
     </div>
 
   </div>
 
   <div class="macro-list">
     <div class="list-title">Macros</div>
+    <div *ngFor="let macro of macroService.macros" class="macro">
+      <div class="execute-text">{{macro.name}} Cam:{{macro.addres}}</div>
+      <button class="btn execute-btn" (click)="macroService.executeSavedMacro(macro)">Execute</button>
+    </div>
   </div>
+</div>
 
+<div *ngIf="macroService.erroRresponse" class="error-line blink_me">
+  {{macroService.erroRresponse}}
+</div>
+<div *ngIf="macroService.succesRresponse" class="succes-line">
+  {{macroService.succesRresponse}}
 </div>

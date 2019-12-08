@@ -4,4 +4,6 @@ export enum CommandTitles {
   left = 'left',
   right = 'right',
   wait = 'wait',
+  reset = 'reset',
+
 }

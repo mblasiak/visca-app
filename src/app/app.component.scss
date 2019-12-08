@@ -25,7 +25,7 @@
 
 }
 
-.control-panel-col{
+.control-panel-col {
   display: flex;
   flex-grow: 1;
   flex-direction: column;
@@ -47,14 +47,14 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
+  align-items: center;
   border: darkblue solid 4px;
   background: white;
 }
 
 
-
-
-.input-box{
+.input-box {
   width: 80px;
   margin: 10px;
   height: 30px;
@@ -68,7 +68,7 @@
   background: white;
 }
 
-.input-box-in{
+.input-box-in {
   width: 60%;
   border: none;
   border-right: darkblue solid 4px;
@@ -76,13 +76,14 @@
   justify-content: center;
   text-align: center;
 }
-.input-box-desc{
+
+.input-box-desc {
   justify-content: center;
   display: flex;
   width: 40%;
 }
 
-.addes-select{
+.addes-select {
   width: 80px;
   height: 30px;
   margin: 10px;
@@ -95,7 +96,7 @@
   background: white;
 }
 
-.addes-select-option{
+.addes-select-option {
   width: 80px;
   height: 30px;
   margin: 10px;
@@ -120,22 +121,25 @@
   margin: auto;
 }
 
-.commands-list{
+.commands-list {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
   border-right: solid darkblue 5px;
-  min-height: 100px;
-  flex-grow: 1;
-}
-.macro-list{
-  display: flex;
-  flex-direction: column;
-  min-height: 100px;
+  min-height: 350px;
   flex-grow: 1;
 }
 
-.list-title{
+.macro-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 350px;
+  flex-grow: 1;
+}
+
+.list-title {
   text-align: center;
   color: deeppink;
   border-bottom: solid darkblue 5px;
@@ -143,9 +147,14 @@
   width: 100%;
 }
 
-.command{
+.command {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
   background: white;
   text-align: center;
+  padding-left: 5px;
   border-width: 0 4px 4px 4px;
   border: darkblue solid;
   border-radius: 4px;
@@ -153,15 +162,121 @@
 }
 
 
-.send-execute-bar{
+.new-macro-name {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  border: darkblue solid;
+  border-width: 0 4px 4px 4px;
+  border-radius: 0 0 4px 4px;
+  width: 90%;
+  padding: 0 0 0 10px;
+  background: white;
+}
+
+.send-execute-bar {
   align-self: flex-end;
+  margin-top: auto;
+  height: 45px;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  border: solid darkblue ;
+  align-items: center;
+  border: solid darkblue;
   border-width: 5px 0 0 0;
   background: white;
   width: 100%;
 }
 
+.macro-name-input {
+  border: solid darkblue;
+  border-width: 0 0 0 4px;
+  flex-grow: 1;
+  margin-left: 10px;
+  text-align: center;
+}
 
+.error-line {
+  color: deeppink;
+  background: white;
+  font-size: large;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  margin: 40px auto 5px auto;
+  border: solid deeppink 5px;
+  border-radius: 5px;
+  justify-content: center;
+}
+
+.succes-line {
+  color: darkgreen;
+  background: white;
+  font-size: large;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  margin: 40px auto 5px auto;
+  border: solid darkgreen 5px;
+  border-radius: 5px;
+  justify-content: center;
+}
+
+.blink_me {
+  animation: blinker 3s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+.macro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  background: white;
+  text-align: center;
+  padding-left: 5px;
+  border-width: 0 4px 4px 4px;
+  border: darkblue solid;
+  border-radius: 4px;
+  width: 90%;
+}
+
+
+.execute-text {
+  flex-grow: 5;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  margin: auto;
+  text-align: center;
+}
+
+.execute-btn {
+  background: deeppink;
+  color: white;
+
+  //flex-grow: 1;
+  width: 40%;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  font-weight: bold;
+  height: 30px;
+  margin: auto;
+  text-align: center;
+  border: solid darkblue;
+  border-width: 0 0 0 4px;
+  border-radius: 0;
+
+}
